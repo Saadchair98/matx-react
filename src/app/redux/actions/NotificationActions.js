@@ -13,7 +13,6 @@ export const getNotification = () => dispatch => {
     });
   });
 };
-
 export const deleteNotification = id => dispatch => {
   axios.post("/api/notification/delete", { id }).then(res => {
     dispatch({
@@ -22,7 +21,6 @@ export const deleteNotification = id => dispatch => {
     });
   });
 };
-
 export const deleteAllNotification = () => dispatch => {
   axios.post("/api/notification/delete-all").then(res => {
     dispatch({
@@ -31,6 +29,10 @@ export const deleteAllNotification = () => dispatch => {
     });
   });
 };
+
+
+
+
 
 export const createNotification = notification => dispatch => {
   axios.post("/api/notification/add", { notification }).then(res => {
