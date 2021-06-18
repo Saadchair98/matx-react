@@ -20,7 +20,7 @@ export function loginWithEmailAndPassword({ email, password }) {
         dispatch(setUserData(user));
 
         history.push({
-          pathname: "/"
+          pathname: "/dashboard/analytics"
         });
 
         return dispatch({
