@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios'
 
-export const GET_NOTIFICATION = "GET_NOTIFICATION";
-export const CREATE_NOTIFICATION = "CREATE_NOTIFICATION";
-export const DELETE_NOTIFICATION = "DELETE_NOTIFICATION";
-export const DELETE_ALL_NOTIFICATION = "DELETE_ALL_NOTIFICATION";
+export const GET_NOTIFICATION = 'GET_NOTIFICATION'
+export const CREATE_NOTIFICATION = 'CREATE_NOTIFICATION'
+export const DELETE_NOTIFICATION = 'DELETE_NOTIFICATION'
+export const DELETE_ALL_NOTIFICATION = 'DELETE_ALL_NOTIFICATION'
 
 export const getNotification = () => dispatch => {
   axios.get("/api/notification").then(res => {

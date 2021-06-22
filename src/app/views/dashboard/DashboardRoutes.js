@@ -1,16 +1,12 @@
-import { MatxLoadable } from "matx";
-import { authRoles } from "../../auth/authRoles";
-
-const Analytics = MatxLoadable({
-  loader: () => import("./Analytics")
-})
+import React from 'react'
+import { authRoles } from '../../auth/authRoles'
 
 const dashboardRoutes = [
-  {
-    path: "/dashboard/analytics",
-    component: Analytics,
-    auth: authRoles.admin
-  }
-];
+    {
+        path: '/dashboard',
+        component: React.lazy(() => import('./Analytics')),
+        auth: authRoles.sa,
+    }
+]
 
-export default dashboardRoutes;
+export default dashboardRoutes

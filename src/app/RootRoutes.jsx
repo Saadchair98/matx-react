@@ -1,15 +1,16 @@
-import React from "react";
-import { Redirect } from "react-router-dom";
+import React from 'react'
+import { Redirect } from 'react-router-dom'
 
-import dashboardRoutes from "./views/dashboard/DashboardRoutes";
-import utilitiesRoutes from "./views/utilities/UtilitiesRoutes";
-import sessionRoutes from "./views/sessions/SessionRoutes";
+import dashboardRoutes from './views/dashboard/DashboardRoutes'
+import utilitiesRoutes from './views/utilities/UtilitiesRoutes'
 
-import materialRoutes from "./views/material-kit/MaterialRoutes";
-import dragAndDropRoute from "./views/Drag&Drop/DragAndDropRoute";
+import materialRoutes from './views/material-kit/MaterialRoutes'
+import chartsRoute from './views/charts/ChartsRoute'
+import dragAndDropRoute from './views/Drag&Drop/DragAndDropRoute'
 
-import formsRoutes from "./views/forms/FormsRoutes";
-import mapRoutes from "./views/map/MapRoutes";
+import formsRoutes from './views/forms/FormsRoutes'
+import mapRoutes from './views/map/MapRoutes'
+
 
 const redirectRoute = [
   {
@@ -20,21 +21,21 @@ const redirectRoute = [
 ];
 
 const errorRoute = [
-  {
-    component: () => <Redirect to="/session/404" />
-  }
-];
+    {
+        component: () => <Redirect to="/session/404" />,
+    },
+]
 
 const routes = [
-  ...sessionRoutes,
-  ...dashboardRoutes,
-  ...materialRoutes,
-  ...utilitiesRoutes,
-  ...dragAndDropRoute,
-  ...formsRoutes,
-  ...mapRoutes,
-  ...redirectRoute,
-  ...errorRoute
-];
+    ...dashboardRoutes,
+    ...materialRoutes,
+    ...utilitiesRoutes,
+    ...chartsRoute,
+    ...dragAndDropRoute,
+    ...formsRoutes,
+    ...mapRoutes,
+    ...redirectRoute,
+    ...errorRoute,
+]
 
-export default routes;
+export default routes
